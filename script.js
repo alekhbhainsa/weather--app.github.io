@@ -51,6 +51,6 @@ let weather = {
       }
     });
   
-  weather.fetchWeather("Delhi");
+  weather.fetchWeather("London");
 
   //api key =  923d3db62107b5d552f70b416d197ed7
