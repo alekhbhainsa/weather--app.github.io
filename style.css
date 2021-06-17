@@ -1,0 +1,179 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: #222;
+    background-image: url('bg.jpg');
+    background-position: center;background-size: cover;
+    background-repeat: no-repeat;
+    
+    /* background-color: aqua; */
+    font-size: 120%;
+  }
+  
+  .card {
+    background: linear-gradient(-75deg, rgb(241, 71, 150), rgb(49, 228, 58));
+    color: white;
+    padding: 2em;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 420px;
+    margin: 1em;
+  }
+  
+  .search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  button {
+    margin: 0.5em;
+    border-radius: 50%;
+    border: none;
+    height: 44px;
+    width: 44px;
+    outline: none;
+    background: #d672722b;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+  
+  input.search-bar {
+    border: none;
+    outline: none;
+    padding: 0.4em 1em;
+    border-radius: 24px;
+    background: #29ebf5fb;
+    color: rgb(87, 116, 245);
+    font-family: inherit;
+    font-size: 105%;
+    width: calc(100% - 100px);
+  }
+  
+  button:hover {
+    background: #f5e553;
+  }
+  
+  h1.temp {
+    margin: 0;
+    margin-bottom: 0.4em;
+  }
+  
+  .flex {
+    display: flex;
+    align-items: center;
+  }
+  
+  .description {
+    text-transform: capitalize;
+    margin-left: 8px;
+  }
+  
+  .weather.loading {
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+  }
+  
+  .weather.loading:after {
+    visibility: visible;
+    content: "Loading...";
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 20px;
+  }
+  
+  #hero::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  
+  }
+  #hero .hero{
+    display: flex;
+    max-width: 200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: center;
+  }
+  #hero h1{
+    display: block;
+    width: fit-content;
+    font-size: 2rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1.5s;
+  
+  }
+  #hero h1:nth-child(1){
+    animation-delay: 1.5s;
+  }
+  #hero h1:nth-child(2) {
+    animation-delay: 2.5s; 
+  }
+  
+  #hero h1:nth-child(3){
+    animation: text_reveal_name .5 ease forwards;
+    animation-delay: 3.5s;
+  }
+  
+  #hero h1 span{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 0;
+    background-color: rgb(243, 57, 172);
+    animation: text_reveal_box 1s ease;
+    animation-delay: 1s;
+  }
+  #hero h1:nth-child(1) span{
+    animation-delay: .5s;
+  }
+  #hero h1:nth-child(2) span{
+    animation-delay: 1.5s;
+  }
+  #hero h1:nth-child(3) span{
+    animation-delay: 2.5s;
+  }
+  
+  
+  
+  @keyframes text_reveal_box{
+    50%{
+      width: 100%;
+      left: 0;
+      
+    }
+    100%{
+      width: 0;
+      left: 100%;
+    }
+  }
+  @keyframes text_reveal{
+    100%{
+      color: rgb(241, 76, 11);
+      
+    }
+    
+  }
+    
+  @keyframes text_reveal_name{
+    100%{
+      color: rgb(97, 56, 247);
+      font-weight: 40px;
+  
+    }
+    
+   } 
+    
